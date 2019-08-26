@@ -14,15 +14,20 @@ a {
 	font-family: @pFont;
 }
 
+body {
+	width: 100%;
+	margin: 0 auto;
+}
+
 .head {
 	display: flex;
 	justify-content: space-between;
-	height: 70vh;
+	height: 100vh;
 	background-image: url("../img/bowl.jpg");
 	background-repeat: no-repeat;
-	//background-size: 100%;
 	background-size: cover;
 	background-position: right;
+	margin-top: 70px;
 
 	h1 {
 		//font-size: 3.6rem;
@@ -32,8 +37,8 @@ a {
 	}
 	h3 {
 		//font-size: 3.4rem;
-		font-size: calc(20px + (50 - 14) * ((100vw - 300px) / (1600 - 300)));
-		margin: 2vh 0;
+		font-size: calc(20px + (40 - 14) * ((100vw - 300px) / (1600 - 300)));
+		margin: 5vh 0;
 	}
 
 	div {
@@ -41,9 +46,10 @@ a {
 		flex-direction: column;
 		align-items: center;
 		width: 50%;
+		margin-top: 10vh;
 
 		.btn {
-			margin-top: 7vh;
+			margin-top: 5vh;
 			-moz-box-shadow: 3px 4px 0px 0px #3e7327;
 			-webkit-box-shadow: 3px 4px 0px 0px #3e7327;
 			box-shadow: 3px 4px 0px 0px #3e7327;
@@ -74,7 +80,7 @@ a {
 			color: #ffffff;
 			font-family: @pFont;
 			//font-size: 2.2rem;
-			font-size: calc(20px + (30 - 14) * ((100vw - 300px) / (1600 - 300)));
+			font-size: calc(16px + (30 - 14) * ((100vw - 300px) / (1600 - 300)));
 			padding: 11px 58px;
 			text-decoration: none;
 			text-shadow: 0px 1px 0px #5b8a3c;
@@ -106,5 +112,32 @@ a {
 	}
 	img {
 		width: 50%;
+	}
+}
+
+.about {
+	display: flex;
+	justify-content: space-between;
+	line-height: 1.8;
+	background-color: @headBackground;
+	height: 100vh;
+	h3 {
+		font-size: calc(20px + (34 - 14) * ((100vw - 300px) / (1600 - 300)));
+		text-align: center;
+	}
+	p {
+		font-size: calc(16px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
+	}
+
+	div {
+		margin-top: 30vh;
+		width: 33%;
+		display: flex;
+		flex-direction: column;
+		i {
+			text-align: center;
+			justify-items: center;
+			margin-bottom: 20px;
+		}
 	}
 }

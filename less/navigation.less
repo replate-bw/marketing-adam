@@ -1,0 +1,26 @@
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	width: 70%;
+	top: 0;
+	//font-size: 2rem;
+	font-size: calc(12px + (24 - 12) * ((100vw - 300px) / (1600 - 300)));
+	color: @navLinks;
+	background-color: @darkBackground;
+	height: 70px;
+	h2 {
+		//font-size: 2em;
+		font-size: calc(12px + (40 - 12) * ((100vw - 300px) / (1600 - 300)));
+	}
+	a {
+		text-decoration: none;
+		color: @navLinks;
+		margin: 0 20px;
+		&:hover {
+			color: #fff;
+			text-decoration-line: underline;
+		}
+	}
+}

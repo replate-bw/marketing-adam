@@ -200,7 +200,7 @@ body {
   .head {
     justify-content: center;
     color: #ffffff;
-    text-shadow: 4px 4px #000;
+    text-shadow: -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000;
   }
 }
 .head h1 {
@@ -413,4 +413,69 @@ form .button:hover {
 form .button:active {
   position: relative;
   top: 1px;
+}
+.meet {
+  margin: 90px 0;
+  font-size: calc(20px + (50 - 14) * ((100vw - 300px) / (1600 - 300)));
+  text-align: center;
+}
+.meet div {
+  width: 48%;
+}
+.team {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media ( max-width: 500px ) {
+  .team {
+    flex-direction: column;
+  }
+}
+.team h3 {
+  font-size: calc(22px + (30 - 14) * ((100vw - 300px) / (1600 - 300)));
+  text-decoration: underline;
+}
+.team p,
+.team a {
+  font-size: calc(20px + (22 - 12) * ((100vw - 300px) / (1600 - 300)));
+  margin-top: 20px;
+}
+.team div {
+  width: 48%;
+  display: flex;
+  margin-bottom: 30px;
+  margin-left: 15px;
+}
+@media ( max-width: 500px ) {
+  .team div {
+    flex-direction: column;
+    width: 500px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.team div img {
+  width: 60%;
+  height: 500px;
+  border-radius: 300px;
+  /* or 50% */
+}
+@media ( max-width: 500px ) {
+  .team div img {
+    width: 300px;
+    height: 300px;
+  }
+}
+.team div div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 140px;
+  margin-left: 30px;
+}
+@media ( max-width: 500px ) {
+  .team div div {
+    margin: 0;
+    margin-top: 20px;
+  }
 }

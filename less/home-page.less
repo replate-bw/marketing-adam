@@ -32,9 +32,8 @@ body {
 		//background-image: none;
 		justify-content: center;
 		color: rgb(255, 255, 255);
-		//text-shadow: -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, //255), -1px 1px 0 rgb(255, 255, 255),
-		//	1px 1px 0 rgb(255, 255, 255);
-		text-shadow: 4px 4px #000;
+		text-shadow: -2px -2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0), -2px 2px 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0);
+		//text-shadow: 4px 4px #000;
 	}
 
 	h1 {
@@ -277,6 +276,69 @@ form {
 		&:active {
 			position: relative;
 			top: 1px;
+		}
+	}
+}
+
+//************team page****************/
+.meet {
+	margin: 90px 0;
+	font-size: calc(20px + (50 - 14) * ((100vw - 300px) / (1600 - 300)));
+	text-align: center;
+	//display: flex;
+	//flex-wrap: wrap;
+	div {
+		width: 48%;
+	}
+}
+
+.team {
+	display: flex;
+	flex-wrap: wrap;
+	@media @phone {
+		flex-direction: column;
+	}
+	h3 {
+		font-size: calc(22px + (30 - 14) * ((100vw - 300px) / (1600 - 300)));
+		text-decoration: underline;
+	}
+	p,
+	a {
+		font-size: calc(20px + (22 - 12) * ((100vw - 300px) / (1600 - 300)));
+		margin-top: 20px;
+	}
+	div {
+		width: 48%;
+		display: flex;
+		margin-bottom: 30px;
+		margin-left: 15px;
+		@media @phone {
+			flex-direction: column;
+			width: 500px;
+			align-content: center;
+			justify-content: center;
+			align-items: center;
+		}
+		img {
+			width: 60%;
+			height: 500px;
+
+			border-radius: 300px; /* or 50% */
+
+			@media @phone {
+				width: 300px;
+				height: 300px;
+			}
+		}
+		div {
+			display: flex;
+			flex-direction: column;
+			margin-top: 140px;
+			margin-left: 30px;
+			@media @phone {
+				margin: 0;
+				margin-top: 20px;
+			}
 		}
 	}
 }

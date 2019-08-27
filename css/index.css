@@ -196,14 +196,32 @@ body {
   background-position: right;
   margin-top: 70px;
 }
+@media ( max-width: 500px ) {
+  .head {
+    justify-content: center;
+    color: #ffffff;
+    text-shadow: 4px 4px #000;
+  }
+}
 .head h1 {
   font-size: calc(20px + (50 - 14) * ((100vw - 300px) / (1600 - 300)));
   text-align: center;
   margin: 2vh 0;
 }
+@media ( max-width: 500px ) {
+  .head h1 {
+    font-size: 40px;
+  }
+}
 .head h3 {
   font-size: calc(20px + (40 - 14) * ((100vw - 300px) / (1600 - 300)));
   margin: 5vh 0;
+}
+@media ( max-width: 500px ) {
+  .head h3 {
+    font-size: 50px;
+    text-align: center;
+  }
 }
 .head div {
   display: flex;
@@ -262,6 +280,13 @@ body {
   background-color: #d8d8d8;
   height: 100vh;
 }
+@media ( max-width: 500px ) {
+  .about {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 150vh;
+  }
+}
 .about h3 {
   font-size: calc(20px + (34 - 14) * ((100vw - 300px) / (1600 - 300)));
   text-align: center;
@@ -275,6 +300,12 @@ body {
   display: flex;
   flex-direction: column;
 }
+@media ( max-width: 500px ) {
+  .about div {
+    margin-top: 70px;
+    width: 100%;
+  }
+}
 .about div i {
   text-align: center;
   justify-items: center;
@@ -287,6 +318,11 @@ body {
   background-size: cover;
   background-position: right;
 }
+@media ( max-width: 500px ) {
+  .contactSection {
+    background-image: none;
+  }
+}
 form {
   margin: 0 left;
   width: 80%;
@@ -297,8 +333,19 @@ form p {
   font-size: calc(12px + (30 - 12) * ((100vw - 300px) / (1600 - 300)));
   text-decoration: underline;
 }
+@media ( max-width: 500px ) {
+  form p {
+    font-size: 30px;
+    text-align: center;
+  }
+}
 form div {
   margin-top: 3em;
+}
+@media ( max-width: 500px ) {
+  form div {
+    margin-top: 1em;
+  }
 }
 form label {
   display: inline-block;
@@ -347,6 +394,11 @@ form .button {
   padding: 11px 58px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #5b8a3c;
+}
+@media ( max-width: 500px ) {
+  form .button {
+    margin: 50px 100px;
+  }
 }
 form .button:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #426830), color-stop(1, #334d27));

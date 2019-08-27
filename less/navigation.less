@@ -10,6 +10,13 @@
 	color: @navLinks;
 	background-color: @darkBackground;
 	height: 70px;
+
+	@media @phone {
+		position: fixed;
+		top: 0;
+		width: 500px;
+	}
+
 	h2 {
 		//font-size: 2em;
 		font-size: calc(12px + (40 - 12) * ((100vw - 300px) / (1600 - 300)));

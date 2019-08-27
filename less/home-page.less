@@ -28,17 +28,31 @@ body {
 	background-size: cover;
 	background-position: right;
 	margin-top: 70px;
+	@media @phone {
+		//background-image: none;
+		justify-content: center;
+		color: rgb(255, 255, 255);
+		text-shadow: -2px -2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0), -2px 2px 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0);
+		//text-shadow: 4px 4px #000;
+	}
 
 	h1 {
 		//font-size: 3.6rem;
 		font-size: calc(20px + (50 - 14) * ((100vw - 300px) / (1600 - 300)));
 		text-align: center;
 		margin: 2vh 0;
+		@media @phone {
+			font-size: 40px;
+		}
 	}
 	h3 {
 		//font-size: 3.4rem;
 		font-size: calc(20px + (40 - 14) * ((100vw - 300px) / (1600 - 300)));
 		margin: 5vh 0;
+		@media @phone {
+			font-size: 50px;
+			text-align: center;
+		}
 	}
 
 	div {
@@ -121,6 +135,11 @@ body {
 	line-height: 1.8;
 	background-color: @headBackground;
 	height: 100vh;
+	@media @phone {
+		flex-direction: column;
+		justify-content: flex-start;
+		height: 150vh;
+	}
 	h3 {
 		font-size: calc(20px + (34 - 14) * ((100vw - 300px) / (1600 - 300)));
 		text-align: center;
@@ -134,10 +153,192 @@ body {
 		width: 33%;
 		display: flex;
 		flex-direction: column;
+		@media @phone {
+			margin-top: 70px;
+			width: 100%;
+		}
 		i {
 			text-align: center;
 			justify-items: center;
 			margin-bottom: 20px;
+		}
+	}
+}
+
+.contactSection {
+	height: 100vh;
+	background-image: url("../img/fruit2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: right;
+	@media @phone {
+		background-image: none;
+	}
+}
+
+form {
+	margin: 0 left;
+	width: 80%;
+	padding-top: 70px;
+	padding-left: 50px;
+	p {
+		font-size: calc(12px + (30 - 12) * ((100vw - 300px) / (1600 - 300)));
+		text-decoration: underline;
+		@media @phone {
+			font-size: 30px;
+			text-align: center;
+		}
+	}
+	div {
+		margin-top: 3em;
+		@media @phone {
+			margin-top: 1em;
+		}
+	}
+	label {
+		display: inline-block;
+		width: 90px;
+		text-align: left;
+
+		font-size: 22px;
+	}
+	input,
+	textarea {
+		font: 1em sans-serif;
+		width: 400px;
+		height: 40px;
+		box-sizing: border-box;
+		border: 1px solid #999;
+	}
+	input:focus,
+	textarea:focus {
+		border-color: #000;
+	}
+	textarea {
+		vertical-align: top;
+		height: 10em;
+	}
+	.button {
+		margin: 50px 200px;
+
+		@media @phone {
+			margin: 50px 100px;
+		}
+
+		-moz-box-shadow: 3px 4px 0px 0px #3e7327;
+		-webkit-box-shadow: 3px 4px 0px 0px #3e7327;
+		box-shadow: 3px 4px 0px 0px #3e7327;
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77b55a), color-stop(1, #72b352));
+		background: -moz-linear-gradient(top, #77b55a 5%, #72b352 100%);
+		background: -webkit-linear-gradient(top, #77b55a 5%, #72b352 100%);
+		background: -o-linear-gradient(top, #77b55a 5%, #72b352 100%);
+		background: -ms-linear-gradient(top, #77b55a 5%, #72b352 100%);
+		background: linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(
+				startColorstr='#77b55a',
+				endColorstr='#72b352',
+				GradientType=0
+			);
+		background-color: #77b55a;
+		-moz-border-radius: 18px;
+		-webkit-border-radius: 18px;
+		border-radius: 18px;
+		border: 1px solid #4b8f29;
+		display: inline-block;
+		cursor: pointer;
+		color: #ffffff;
+		font-family: @pFont;
+		//font-size: 2.2rem;
+		font-size: calc(16px + (30 - 14) * ((100vw - 300px) / (1600 - 300)));
+		padding: 11px 58px;
+		text-decoration: none;
+		text-shadow: 0px 1px 0px #5b8a3c;
+		&:hover {
+			background: -webkit-gradient(
+				linear,
+				left top,
+				left bottom,
+				color-stop(0.05, #426830),
+				color-stop(1, #334d27)
+			);
+			background: -moz-linear-gradient(top, #5b8f41 8%, #77b55a 100%);
+			background: -webkit-linear-gradient(top, #5b8f41 8%, #77b55a 100%);
+			background: -o-linear-gradient(top, #5b8f41 8%, #77b55a 100%);
+			background: -ms-linear-gradient(top, #5b8f41 8%, #77b55a 100%);
+			background: linear-gradient(to bottom, #5b8f41 8%, #77b55a 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient(
+					startColorstr='#72b352',
+					endColorstr='#77b55a',
+					GradientType=0
+				);
+			background-color: #4d7937;
+		}
+		&:active {
+			position: relative;
+			top: 1px;
+		}
+	}
+}
+
+//************team page****************/
+.meet {
+	margin: 90px 0;
+	font-size: calc(20px + (50 - 14) * ((100vw - 300px) / (1600 - 300)));
+	text-align: center;
+	//display: flex;
+	//flex-wrap: wrap;
+	div {
+		width: 48%;
+	}
+}
+
+.team {
+	display: flex;
+	flex-wrap: wrap;
+	@media @phone {
+		flex-direction: column;
+	}
+	h3 {
+		font-size: calc(22px + (30 - 14) * ((100vw - 300px) / (1600 - 300)));
+		text-decoration: underline;
+	}
+	p,
+	a {
+		font-size: calc(20px + (22 - 12) * ((100vw - 300px) / (1600 - 300)));
+		margin-top: 20px;
+	}
+	div {
+		width: 48%;
+		display: flex;
+		margin-bottom: 30px;
+		margin-left: 15px;
+		@media @phone {
+			flex-direction: column;
+			width: 500px;
+			align-content: center;
+			justify-content: center;
+			align-items: center;
+		}
+		img {
+			width: 60%;
+			height: 500px;
+
+			border-radius: 300px; /* or 50% */
+
+			@media @phone {
+				width: 300px;
+				height: 300px;
+			}
+		}
+		div {
+			display: flex;
+			flex-direction: column;
+			margin-top: 140px;
+			margin-left: 30px;
+			@media @phone {
+				margin: 0;
+				margin-top: 20px;
+			}
 		}
 	}
 }

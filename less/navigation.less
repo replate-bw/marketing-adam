@@ -25,9 +25,17 @@
 		text-decoration: none;
 		color: @navLinks;
 		margin: 0 20px;
+		transition: 2s underline;
 		&:hover {
 			color: #fff;
 			text-decoration-line: underline;
 		}
+		&:focus {
+			text-decoration: underline;
+		}
 	}
+}
+
+.active {
+	text-decoration: underline;
 }

@@ -28,6 +28,11 @@ body {
 	background-size: cover;
 	background-position: right;
 	margin-top: 70px;
+	@media @tablet {
+		justify-content: center;
+		text-shadow: -2px -2px 0 rgb(255, 255, 255), 2px -2px 0 rgb(255, 255, 255), -2px 2px 0 rgb(255, 255, 255),
+			2px 2px 0 rgb(255, 255, 255);
+	}
 	@media @phone {
 		//background-image: none;
 		justify-content: center;
@@ -135,6 +140,10 @@ body {
 	line-height: 1.8;
 	background-color: @headBackground;
 	height: 100vh;
+	@media @tablet {
+		flex-direction: column;
+		height: 130vh;
+	}
 	@media @phone {
 		flex-direction: column;
 		justify-content: flex-start;
@@ -153,6 +162,10 @@ body {
 		width: 33%;
 		display: flex;
 		flex-direction: column;
+		@media @tablet {
+			width: 100%;
+			margin-top: 20px;
+		}
 		@media @phone {
 			margin-top: 70px;
 			width: 100%;
@@ -184,6 +197,11 @@ form {
 	p {
 		font-size: calc(12px + (30 - 12) * ((100vw - 300px) / (1600 - 300)));
 		text-decoration: underline;
+		@media @tablet {
+			font-size: 25px;
+			text-shadow: -2px -2px 0 rgb(255, 255, 255), 2px -2px 0 rgb(255, 255, 255), -2px 2px 0 rgb(255, 255, 255),
+				2px 2px 0 rgb(255, 255, 255);
+		}
 		@media @phone {
 			font-size: 30px;
 			text-align: center;
@@ -201,11 +219,17 @@ form {
 		text-align: left;
 
 		font-size: 22px;
+		@media @tablet {
+			text-shadow: -2px -2px 0 rgb(255, 255, 255), 2px -2px 0 rgb(255, 255, 255), -2px 2px 0 rgb(255, 255, 255),
+				2px 2px 0 rgb(255, 255, 255);
+		}
 	}
 	input,
 	textarea {
 		font: 1em sans-serif;
-		width: 400px;
+		//width: 400px;
+		//width: min(400px, 100vw - 300px);
+		width: calc(250px + (400 - 250) * ((100vw - 300px) / (1600 - 300)));
 		height: 40px;
 		box-sizing: border-box;
 		border: 1px solid #999;
@@ -312,6 +336,11 @@ form {
 		display: flex;
 		margin-bottom: 30px;
 		margin-left: 15px;
+		@media @tablet {
+			flex-direction: column;
+			width: 600px;
+			align-items: center;
+		}
 		@media @phone {
 			flex-direction: column;
 			width: 500px;
@@ -323,7 +352,11 @@ form {
 			width: 60%;
 			height: 500px;
 
-			border-radius: 300px; /* or 50% */
+			border-radius: 300px;
+
+			@media @tablet {
+				height: 400px;
+			}
 
 			@media @phone {
 				width: 300px;

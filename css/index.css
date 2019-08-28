@@ -163,10 +163,17 @@ table {
   text-decoration: none;
   color: #c6dad5;
   margin: 0 20px;
+  transition: 2s underline;
 }
 .nav a:hover {
   color: #fff;
   text-decoration-line: underline;
+}
+.nav a:focus {
+  text-decoration: underline;
+}
+.active {
+  text-decoration: underline;
 }
 h1 {
   font-family: 'Lexend Deca', sans-serif;
@@ -195,6 +202,12 @@ body {
   background-size: cover;
   background-position: right;
   margin-top: 70px;
+}
+@media (max-width:860px) {
+  .head {
+    justify-content: center;
+    text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, 2px 2px 0 #ffffff;
+  }
 }
 @media ( max-width: 500px ) {
   .head {
@@ -280,6 +293,12 @@ body {
   background-color: #d8d8d8;
   height: 100vh;
 }
+@media (max-width:860px) {
+  .about {
+    flex-direction: column;
+    height: 130vh;
+  }
+}
 @media ( max-width: 500px ) {
   .about {
     flex-direction: column;
@@ -299,6 +318,12 @@ body {
   width: 33%;
   display: flex;
   flex-direction: column;
+}
+@media (max-width:860px) {
+  .about div {
+    width: 100%;
+    margin-top: 20px;
+  }
 }
 @media ( max-width: 500px ) {
   .about div {
@@ -333,6 +358,12 @@ form p {
   font-size: calc(12px + (30 - 12) * ((100vw - 300px) / (1600 - 300)));
   text-decoration: underline;
 }
+@media (max-width:860px) {
+  form p {
+    font-size: 25px;
+    text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, 2px 2px 0 #ffffff;
+  }
+}
 @media ( max-width: 500px ) {
   form p {
     font-size: 30px;
@@ -353,10 +384,15 @@ form label {
   text-align: left;
   font-size: 22px;
 }
+@media (max-width:860px) {
+  form label {
+    text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff, 2px 2px 0 #ffffff;
+  }
+}
 form input,
 form textarea {
   font: 1em sans-serif;
-  width: 400px;
+  width: calc(250px + (400 - 250) * ((100vw - 300px) / (1600 - 300)));
   height: 40px;
   box-sizing: border-box;
   border: 1px solid #999;
@@ -446,6 +482,13 @@ form .button:active {
   margin-bottom: 30px;
   margin-left: 15px;
 }
+@media (max-width:860px) {
+  .team div {
+    flex-direction: column;
+    width: 600px;
+    align-items: center;
+  }
+}
 @media ( max-width: 500px ) {
   .team div {
     flex-direction: column;
@@ -459,7 +502,11 @@ form .button:active {
   width: 60%;
   height: 500px;
   border-radius: 300px;
-  /* or 50% */
+}
+@media (max-width:860px) {
+  .team div img {
+    height: 400px;
+  }
 }
 @media ( max-width: 500px ) {
   .team div img {

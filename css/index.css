@@ -229,11 +229,11 @@ body {
 .head h3 {
   font-size: calc(20px + (40 - 14) * ((100vw - 300px) / (1600 - 300)));
   margin: 5vh 0;
+  text-align: center;
 }
 @media ( max-width: 500px ) {
   .head h3 {
     font-size: 50px;
-    text-align: center;
   }
 }
 .head div {
@@ -452,6 +452,7 @@ form .button:active {
 }
 .meet {
   margin: 90px 0;
+  padding-top: 20px;
   font-size: calc(20px + (50 - 14) * ((100vw - 300px) / (1600 - 300)));
   text-align: center;
 }
@@ -463,6 +464,11 @@ form .button:active {
   flex-wrap: wrap;
 }
 @media ( max-width: 500px ) {
+  .team {
+    flex-direction: column;
+  }
+}
+@media (max-width: 1270px) {
   .team {
     flex-direction: column;
   }
@@ -482,17 +488,22 @@ form .button:active {
   margin-bottom: 30px;
   margin-left: 15px;
 }
+@media (max-width: 1270px) {
+  .team div {
+    width: 800px;
+  }
+}
 @media (max-width:860px) {
   .team div {
     flex-direction: column;
     width: 600px;
-    align-items: center;
+    align-items: left;
   }
 }
 @media ( max-width: 500px ) {
   .team div {
     flex-direction: column;
-    width: 500px;
+    width: 465px;
     align-content: center;
     justify-content: center;
     align-items: center;
@@ -500,13 +511,8 @@ form .button:active {
 }
 .team div img {
   width: 60%;
-  height: 500px;
+  height: 450px;
   border-radius: 300px;
-}
-@media (max-width:860px) {
-  .team div img {
-    height: 400px;
-  }
 }
 @media ( max-width: 500px ) {
   .team div img {
@@ -520,9 +526,18 @@ form .button:active {
   margin-top: 140px;
   margin-left: 30px;
 }
+@media (max-width:860px) {
+  .team div div {
+    margin-top: 20px;
+    margin-left: 100px;
+  }
+}
 @media ( max-width: 500px ) {
   .team div div {
     margin: 0;
     margin-top: 20px;
   }
+}
+.teamPageBody {
+  background-color: #3d4d41;
 }

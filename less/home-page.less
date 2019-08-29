@@ -34,15 +34,12 @@ body {
 			2px 2px 0 rgb(255, 255, 255);
 	}
 	@media @phone {
-		//background-image: none;
 		justify-content: center;
 		color: rgb(255, 255, 255);
 		text-shadow: -2px -2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0), -2px 2px 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0);
-		//text-shadow: 4px 4px #000;
 	}
 
 	h1 {
-		//font-size: 3.6rem;
 		font-size: calc(20px + (50 - 14) * ((100vw - 300px) / (1600 - 300)));
 		text-align: center;
 		margin: 2vh 0;
@@ -51,12 +48,11 @@ body {
 		}
 	}
 	h3 {
-		//font-size: 3.4rem;
 		font-size: calc(20px + (40 - 14) * ((100vw - 300px) / (1600 - 300)));
 		margin: 5vh 0;
+		text-align: center;
 		@media @phone {
 			font-size: 50px;
-			text-align: center;
 		}
 	}
 
@@ -227,8 +223,6 @@ form {
 	input,
 	textarea {
 		font: 1em sans-serif;
-		//width: 400px;
-		//width: min(400px, 100vw - 300px);
 		width: calc(250px + (400 - 250) * ((100vw - 300px) / (1600 - 300)));
 		height: 40px;
 		box-sizing: border-box;
@@ -272,7 +266,6 @@ form {
 		cursor: pointer;
 		color: #ffffff;
 		font-family: @pFont;
-		//font-size: 2.2rem;
 		font-size: calc(16px + (30 - 14) * ((100vw - 300px) / (1600 - 300)));
 		padding: 11px 58px;
 		text-decoration: none;
@@ -307,10 +300,9 @@ form {
 //************team page****************/
 .meet {
 	margin: 90px 0;
+	padding-top: 20px;
 	font-size: calc(20px + (50 - 14) * ((100vw - 300px) / (1600 - 300)));
 	text-align: center;
-	//display: flex;
-	//flex-wrap: wrap;
 	div {
 		width: 48%;
 	}
@@ -320,6 +312,9 @@ form {
 	display: flex;
 	flex-wrap: wrap;
 	@media @phone {
+		flex-direction: column;
+	}
+	@media @laptop {
 		flex-direction: column;
 	}
 	h3 {
@@ -336,27 +331,26 @@ form {
 		display: flex;
 		margin-bottom: 30px;
 		margin-left: 15px;
+		@media @laptop {
+			width: 800px;
+		}
 		@media @tablet {
 			flex-direction: column;
 			width: 600px;
-			align-items: center;
+			align-items: left;
 		}
 		@media @phone {
 			flex-direction: column;
-			width: 500px;
+			width: 465px;
 			align-content: center;
 			justify-content: center;
 			align-items: center;
 		}
 		img {
 			width: 60%;
-			height: 500px;
+			height: 450px;
 
 			border-radius: 300px;
-
-			@media @tablet {
-				height: 400px;
-			}
 
 			@media @phone {
 				width: 300px;
@@ -368,10 +362,18 @@ form {
 			flex-direction: column;
 			margin-top: 140px;
 			margin-left: 30px;
+			@media @tablet {
+				margin-top: 20px;
+				margin-left: 100px;
+			}
 			@media @phone {
 				margin: 0;
 				margin-top: 20px;
 			}
 		}
 	}
+}
+
+.teamPageBody {
+	background-color: #3d4d41;
 }

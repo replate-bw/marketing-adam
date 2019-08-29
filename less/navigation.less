@@ -13,7 +13,7 @@
 	@media @phone {
 		position: fixed;
 		top: 0;
-		width: 500px;
+		width: 485px;
 	}
 
 	h2 {
@@ -24,6 +24,9 @@
 		color: @navLinks;
 		margin: 0 10px;
 		transition: 2s underline;
+		@media @phone {
+			margin: 0 10px;
+		}
 		&:hover {
 			color: #fff;
 			text-decoration-line: underline;

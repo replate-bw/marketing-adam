@@ -1,3 +1,6 @@
+html {
+	background-color: #e2ecea;
+}
 h1 {
 	font-family: @headerFont;
 }
@@ -135,15 +138,21 @@ body {
 	justify-content: space-between;
 	line-height: 1.8;
 	background-color: @headBackground;
-	height: 100vh;
+	//height: 100vh;
+	//height: max(100vh, 700px);
+	height: 1000px;
 	@media @tablet {
 		flex-direction: column;
-		height: 130vh;
+		//height: 130vh;
+		//height: max(130vh, 1000px);
+		//height: 1000px;
 	}
 	@media @phone {
 		flex-direction: column;
 		justify-content: flex-start;
-		height: 150vh;
+		//height: 130vh;
+		//height: max(150vh, 700px);
+		height: 1060px;
 	}
 	h3 {
 		font-size: calc(20px + (34 - 14) * ((100vw - 300px) / (1600 - 300)));
@@ -375,5 +384,5 @@ form {
 }
 
 .teamPageBody {
-	background-color: #3d4d41;
+	//background-color: #3d4d41;
 }

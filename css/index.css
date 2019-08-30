@@ -297,13 +297,14 @@ body {
 .about {
   display: flex;
   justify-content: space-between;
-  line-height: 1.8;
+  line-height: 3.2;
   background-color: #d8d8d8;
   height: 1000px;
 }
 @media (max-width:860px) {
   .about {
     flex-direction: column;
+    line-height: 1.8;
   }
 }
 @media ( max-width: 500px ) {
